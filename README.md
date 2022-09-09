@@ -60,3 +60,7 @@ git commit
 ```bash
 git show id-commit
 ```
+
+```bash
+git push origin main
+```
