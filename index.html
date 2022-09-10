@@ -4,18 +4,18 @@
     <title>
         Inicio
     </title>
+    <link rel="stylesheet" href="./css/styles.css">
 </head>
 
 <body>
     <div style="width: 1000px; margin: 10px auto;">
         <header>
-            <h1 style="text-align: center;">Apple.com</h1>
+            <h1 style="text-align: center; color: red;">Apple.com</h1>
             <p style="text-align: center; font-style: italic;">Productos top</p>
         </header>
         <main>
-            <div>
+            <div id="div_temas">
                 <h4>Temas</h4>
-                
                 <ul>
                     <li>
                         <a href="./formulario.html">Formulario</a>
@@ -61,7 +61,47 @@
     </td>
     </tr>
     </table>
+    <h1 class="titulo" role="titulo">Samsung.com</h1>
+    <h1 class="titulo" id="titulo_huawei">Huawei.com</h1>
     </main>
+    <h2>Jerarquias de CSS:</h2>
+    <h4>Solo aplica desde diversos metodos, se le esta intentado aplicar diversos valores a la misma propiedad en un elemento</h4>
+    <table class="big_table">
+        <thead>
+            <tr>
+                <th>Metodo</th>
+                <th>Simbolo</th>
+                <th>Peso</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Selector de elemento</td>
+                <td>elemento</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>Selector de clase</td>
+                <td>.class_Name</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>Selector de Atributo</td>
+                <td>selector[atributo]</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>Selector de Id</td>
+                <td>#id</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>html Style</td>
+                <td>style=""</td>
+                <td>5</td>
+            </tr>
+        </tbody>
+    </table>
     <footer>
         <p style="text-align: center;">Hecho con cariño por Arnold &copy;</p>
     </footer>
