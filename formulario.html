@@ -13,31 +13,38 @@
     <form action="">
         <!-- Lo que esta adentro son las partes del fomrulario -->
         <!-- !NOTA CASI TODOS LOS INPUTS TIENEN PLACEHOLDER -->
+
+        <!-- *EL name sirve para enviar los datos -->
+
         <!-- Input type: text -->
         <p>
-            <input type="text" placeholder="Ingrese su nombre">
+            <input type="text" placeholder="Ingrese su nombre" name="nombre" required>
+        </p>
+        <!-- DNI -->
+        <p>
+            <input type="number" style="width:150px ;" placeholder="Ingrese su DNI" maxlength="8">
         </p>
         <!-- Input type: number -->
         <p>
-            <input type="number" placeholder="Ingrese su edad">
+            <input type="number" placeholder="Ingrese su edad" name="edad" required>
         </p>
         <!-- Input type: email -->
         <p>
-            <input type="email" name="" id="" placeholder="Ingrese su correo">
+            <input type="email" name="" id="" placeholder="Ingrese su correo" required>
         </p>
         <!-- Input type: password -->
         <p>
-            <input type="password" name="" id="" placeholder="Ingrese su contraseña">
+            <input type="password" name="" id="" placeholder="Ingrese su contraseña" required>
         </p>
 
         <!-- Input type: date -->
         <p>
-            <input type="date" name="" id="">
+            <input type="date" name="" id="" required>
         </p>
 
         <!-- Lista de accions -->
         <p>
-            <select name="" id="">
+            <select name="" id="" required>
                 <option value="" disabled selected>Seleciona un curso</option>
                 <option value="">Curso de React</option>
                 <option value="">Curso de Angular</option>
