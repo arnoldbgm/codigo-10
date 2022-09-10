@@ -10,7 +10,7 @@
 <body>
     <div style="width: 1000px; margin: 10px auto;">
         <header>
-            <h1 style="text-align: center; color: red;">Apple.com</h1>
+            <h1>Apple.com</h1>
             <p style="text-align: center; font-style: italic;">Productos top</p>
         </header>
         <main>
@@ -25,48 +25,91 @@
                     </li>
                 </ul>
             </div>
-            <table>
+
+            <!-- Productos de Apple -->
+
+  <table>
                 <tr>
                     <td>
-                        <div style="border:2px solid #ccc; border-radius:  10px; padding: 10px; margin: 10px;">
+                        <div class="product_cell iphone">
                             <h2>Iphone 13</h2>
+                            <h3 class="price">999</h3>
                             <img width="200px"
                                 src="https://images.unsplash.com/photo-1632633173522-47456de71b76?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80"
                                 alt="Foto de un Iphone 13 Negro">
                     </td>
     </div>
     <td>
-        <div style="border:2px solid #ccc; border-radius:  10px; padding: 10px; margin: 10px;">
+        <div class="product_cell laptop">
             <h2>Mackbook Pro</h2>
+            <h3>$ 1,999</h3>
             <img width="200px"
                 src="https://images.unsplash.com/photo-1615750185825-fc85c6aba18d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
                 alt="Foto de una Mackbook Pro">
         </div>
     </td>
     <td>
-        <div style="border:2px solid #ccc; border-radius:  10px; padding: 10px; margin: 10px;">
+        <div class="product_cell airpods">
             <h2>Airpods Pro</h2>
+            <h3>$249</h3>
             <img width="200px"
                 src="https://images.unsplash.com/photo-1600294037681-c80b4cb5b434?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
                 alt="Foto de unos Aripods Pro">
         </div>
     </td>
     <td>
-        <div style="border:2px solid #ccc; border-radius:  10px; padding: 10px; margin: 10px;">
+        <div class="product_cell ipad">
             <h2>Ipad Air</h2>
+            <h3>$899</h3>
             <img width="200px"
                 src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-air-compare-202203?wid=210&hei=214&fmt=jpeg&qlt=95&.v=1645072394055"
                 alt="Foto de un Ipad Air">
         </div>
     </td>
     </tr>
+    <tr>
+        <td>
+            <div class="product_cell iphone">
+                <h2>Iphone 14</h2>
+                <h3>$999</h3>
+                <img width="200px"
+                    src="https://cdn.ipadizate.com/2022/07/iPhone-14.1658808913.3428.jpg"
+                    alt="Foto de un Iphone 13 Negro">
+        </td>
+        <td>
+            <div class="product_cell laptop">
+                <h2>Mackbook Air</h2>
+                <h3>$ 1,999</h3>
+                <img width="200px"
+                    src="https://www.apple.com/newsroom/images/product/mac/standard/Apple_new-macbookair-wallpaper-screen_11102020_big.jpg.large.jpg"
+                    alt="Foto de una Mackbook Pro">
+            </div>
+        </td>
+        <td>
+            <div class="product_cell airpods">
+                <h2>Airpods Pro 2</h2>
+                <h3>$249</h3>
+                <img width="200px"
+                    src="https://i0.wp.com/imgs.hipertextual.com/wp-content/uploads/2022/09/airpods-pro-2-003.jpg?fit=1200%2C756&quality=60&strip=all&ssl=1"
+                    alt="Foto de unos Aripods Pro">
+            </div>
+        </td>
+        <td>
+            <div class="product_cell ipad">
+                <h2>Ipad Air</h2>
+                <h3>$899</h3>
+                <img width="200px"
+                    src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-air-compare-202203?wid=210&hei=214&fmt=jpeg&qlt=95&.v=1645072394055"
+                    alt="Foto de un Ipad Air">
+            </div>
+    </tr>
     </table>
-    <h1 class="titulo" role="titulo">Samsung.com</h1>
+    <!-- <h1 class="titulo" role="titulo">Samsung.com</h1>
     <h1 class="titulo" id="titulo_huawei">Huawei.com</h1>
     </main>
     <h2>Jerarquias de CSS:</h2>
-    <h4>Solo aplica desde diversos metodos, se le esta intentado aplicar diversos valores a la misma propiedad en un elemento</h4>
-    <table class="big_table">
+    <h4>Solo aplica desde diversos metodos, se le esta intentado aplicar diversos valores a la misma propiedad en un elemento</h4> -->
+    <!-- <table class="big_table">
         <thead>
             <tr>
                 <th>Metodo</th>
@@ -101,7 +144,16 @@
                 <td>5</td>
             </tr>
         </tbody>
-    </table>
+    </table> -->
+    <section>
+        <h2>Contacto</h2>
+        <div class="div_form">
+            <form action="#">
+                <input type="text">
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </section>
     <footer>
         <p style="text-align: center;">Hecho con cariño por Arnold &copy;</p>
     </footer>
