@@ -1,0 +1,43 @@
+* {
+
+    box-sizing: border-box;
+}
+
+body {
+    background-color: red;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.padre {
+    height: 100vh;
+    display: flex;
+    /* Est o va a respetar el ancho de la pantall y cuando un 
+    elemento ocupa mas de lo dado ira a la siguiente
+    fila */
+    flex-wrap: wrap;
+    /* Justife-content
+    Permite alinear elementos en el elemento horizontal */
+    /* flex start: izquierda */
+    /* center: medio */
+    /* flex-end: derecho */
+    /* space-between: mando los elemenos de extremo a extremo */
+    /* space-around:se parecea a space-between pero da unos margentes
+  al inicio y al final  */
+    /* space-evenly: los margenes izq y der son los mismo */
+    justify-content: space-between;
+
+    /* Align-items es la propiedad de felx que permite alinear
+    elementos verticalmente y comparte todos los propositos
+    de justify contet */
+    align-items: center;
+}
+
+.hijo {
+    width: 25%;
+    height: 100px;
+    border: 1px solid green;
+    background-color: white;
+}
