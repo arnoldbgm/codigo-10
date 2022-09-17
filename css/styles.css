@@ -1,159 +1,165 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,500;0,700;1,400&display=swap');
-
-*{
-    font-family: 'Roboto';
-}
-
-:root{
+:root {
     font-size: 20px;
-}
-
-
-
-/* Selectores */
-/* Selector de elemento */
-h1{
+  }
+  
+  /* Vamos a usar la fuente que acabamos de importar */
+  
+  /* Segun los principios de css las fuentes vienen de la pc (computadora) */
+  /* Si la primera fuente no funciona va a tomar la de respaldo */
+  body {
+    padding: 0px;
+    margin: 0px;
+  }
+  
+  h1 {
     color: green;
     background-color: beige;
     padding: 20px;
     text-align: center;
     font-size: 3rem;
-}
-/* Selector de atributo
-h1[role="titulo"]{
-    font-size: 60px;
-}
-
-/* Selector de clase */
-/* .titulo{
-    color: red;
-    font-size: 30px;
-    background-color: aqua;
-} */
-/* Selector de ID */
-/* #titulo_huawei{
-    color: yellow;
-}
-
-#div_temas{
-    display: none !important;
-}
-
-.big_table{
-    font-size: 30px;
-    border: 1px solid #ccc;
-}
-
-
-.big_table > th, td{
-    padding: 20px;
-}  */
-
-.product_cell{
-    border:2px solid red;
-    border-radius:  10px;
-    padding: 10px; 
-    margin: 10px;
-}
-
-.product_cell:hover{
-    border: 3px dashed blue;
-    box-shadow: 0px 0px 10px blue ;
-}
-
-.product_cell:hover > img{
+  }
+  
+  #div_temas {
+    display: block;
+  }
+  
+  #div_temas > ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 20px;
+  }
+  
+  .productos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0px auto;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .product {
+    width: 80%;
+    height: 400px;
+    min-width: 280px;
+    border: 2px solid blue;
+    border-radius: 10px;
+    position: relative;
+  }
+  .product:hover {
+    border: 4px dashed red;
+    box-shadow: 0px 0px 10px red;
+    cursor: grab;
+  }
+  .product > img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    bottom: 0;
+  }
+  .product:hover > img {
     opacity: 50%;
-    border: 4px solid #000;
-}
-
-.laptop > h2{
+    border: 4px solid black;
+  }
+  
+  /* MD */
+  @media (min-width: 600px) {
+    .product {
+      width: 40%;
+    }
+    #div_temas > ul {
+      height: auto;
+      display: flex;
+      flex-direction: row;
+      
+    }
+  }
+  /* LG */
+  @media (min-width: 900px) {
+    .product {
+      width: 30%;
+    }
+  }
+  
+  
+  
+  .laptop > h2 {
     color: blue;
-}
-
-.laptop > h2::before{
-    content: "❤";
-}
-
-.laptop > h3{
+  }
+  .laptop > h2::before {
+    content: "💻 ";
+  }
+  .laptop > h3 {
     color: cadetblue;
     text-align: right;
     padding-right: 10px;
-}
-
-.iphone > h2{
+  }
+  
+  .celular > h2 {
     color: red;
-}
-.iphone > h3{
-    color: rebeccapurple;
-    text-align: right;
-    padding-right: 10px;
-}
-
-.airpods > h2{
+  }
+  .celular > h2::before {
+    content: "📱 ";
+  }
+  .celular > h3 {
+    color: brown;
+  }
+  
+  .audifono > h2 {
     color: green;
-}
-
-.airpods > h3{
-    color: aqua;
-    text-align: right;
-    padding-right: 10px;
-}
-
-.ipad > h2{
-    color: orange;
-}
-
-.ipad > h3{
-    color: orangered;
-    text-align: right;
-    padding-right: 10px;
-}
-
-.div_form{
+  }
+  .audifono > h3 {
+    color: aquamarine;
+  }
+  
+  /* Estilos para el formulario */
+  .div_form {
     width: 400px;
     margin: 20px auto;
-}
-
-.div_form > form > input{
+  }
+  
+  .div_form > form > input {
     height: 40px;
     border: 1px solid #ccc;
     border-radius: 20px;
     width: 70%;
     font-size: 20px;
     padding-left: 20px;
-    /* Este es el borde que pone el navegador */
     outline: none;
-}
-
-.div_form > form > input:focus{
+  }
+  
+  .div_form > form > input:focus {
     border: 2px solid blue;
-}
-
-.div_form > form > button {
-    height:  40px;
+  }
+  
+  .div_form > form > button {
+    height: 40px;
     border: 1px solid #ccc;
     border-radius: 20px;
     width: 28%;
-}
-
-.div_form > form > button:hover {
+    outline: none;
+  }
+  .div_form > form > button:hover {
     background-color: #666;
     border: none;
-    color: white;
+    color: #fff;
     cursor: pointer;
-}
-
-.div_form > form > button:focus {
+  }
+  .div_form > form > button:focus {
     border: 2px solid red;
-}
-
-/* Pseuo-elementos */
-.price::before{
+  }
+  
+  /* Pseudo-elementos */
+  .price::before {
     content: "$ ";
     font-size: 12px;
-}
-
-.price::after{
+  }
+  .price::after {
     content: ".00";
     font-size: 12px;
-}
+  }
