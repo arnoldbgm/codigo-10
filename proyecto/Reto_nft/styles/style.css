@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Outfit', sans-serif;
+    background-color: hsl(217, 54%, 11%);
+    font-size: 18px;
+    color: hsl(0, 0%, 100%);
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.card{
+    width: 340px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: hsl(216, 50%, 16%);
+    border-radius: 20px;
+    padding: 25px;
+}
+.card-image{
+    position: relative;
+}
+
+#nft-eth{
+    width: 100%;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#eye{
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    border-radius: 20px;
+    width: 100%;
+    height: 98.8%;
+    background-color:hsla(178, 100%, 50%, 0.468);
+    opacity: 0;
+}
+
+#eye:hover{
+    opacity: 1;
+}
+
+#eye img{
+    position: absolute;
+    top: 40%;
+    left: 40%;
+}
+
+.card-text-eth{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.card-text-eth>h1{
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0.75px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.card-text-eth>h1:hover{
+    color: hsl(178, 100%, 50%);
+}
+
+.card-text-eth>p{
+    font-size: 17px;
+    font-weight: 100;
+    margin-bottom: 20px;
+}
+
+.card-text-price{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.565);
+    padding-bottom: 10px;
+}
+
+.eth-price{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.eth-price>p{
+    color: hsl(178, 100%, 50%);
+}
+
+.eth-time{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.eth-time>p{
+    font-weight: 100;
+}
+
+.card-dates{
+    display: flex;
+    margin-top: 20px;
+    align-items: center;
+    gap:20px;
+}
+
+.card-dates img{
+    width: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.457);
+    border-radius: 50px;
+}
+
+.card-dates p{
+    font-weight: 100;   
+}
+
+.card-dates span{
+    font-weight: 400;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.card-dates span:hover{
+    color: hsl(178, 100%, 50%);
+}
