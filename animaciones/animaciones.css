@@ -1,0 +1,107 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: black;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Animemos el Texto */
+
+p {
+    /* *Partes de una animacion */
+    /* ?tiempo */
+
+    animation-duration: 4s;
+
+    /* *EL nombre de la animacion */
+
+    animation-name: primera-animacion;
+
+    /* Esta prop permite pone el numero de veces
+    que se quiere que se haga la animacion */
+
+    animation-iteration-count: infinite;
+
+    animation-direction: alternate;
+
+    
+    font-size: 100px;
+}
+
+/* Tenemos que enlazar en name con el keyfrmae */
+
+@keyframes primera-animacion{
+    /* Lo que esta dentro del keyframe esta hecho para
+    hacer animaciones */
+
+    /* !El inicio de la animacion */
+    from{
+        margin-left: 100%;
+        /* margin-top: 40%; */
+        background-color: blue;
+    }
+
+    /* El fin de la animacion */
+    to{
+        margin-right: 100%;
+        color: red;
+        background-color: cyan;
+        text-shadow: 5px 5px yellow;
+    }
+}
+
+h1 {
+    font-size: 70px;
+    color: #ffc107;
+    font-family: "Arial Black", Gadget, sans-serif;
+    text-shadow: 0px 0px 0 rgb(250, 188, 2), 1px 1px 0 rgb(245, 183, 0),
+      2px 2px 0 rgb(240, 178, 0), 3px 3px 0 rgb(235, 173, 0),
+      4px 4px 0 rgb(230, 168, 0), 5px 5px 0 rgb(225, 163, 0),
+      6px 6px 0 rgb(220, 158, 0), 7px 7px 0 rgb(215, 153, 0),
+      8px 8px 0 rgb(210, 148, 0), 9px 9px 0 rgb(205, 143, 0),
+      10px 10px 0 rgb(200, 138, 0), 11px 11px 10px rgba(0, 0, 0, 0.6),
+      11px 11px 1px rgba(0, 0, 0, 0.5), 0px 0px 10px rgba(0, 0, 0, 0.2);
+  
+      animation-duration: 3s;
+      animation-name: screen-saver;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+  }
+
+@keyframes screen-saver {
+    from{
+        margin-left: 100%;
+    }
+    
+    to{
+        margin-right: 100%;
+    }
+
+    /* Porcentajes de fotogramas */
+
+    10%{
+        margin-top: 500px;
+    }
+
+    30%{
+        margin-top: -500px;
+    }
+
+    50%{
+        margin-top: 500px;
+    }
+
+    70%{
+        margin-top: -500px;
+    }
+
+    90%{
+        margin-top: 500px;
+    }
+
+    100%{
+        margin: 0;
+    }
+}
