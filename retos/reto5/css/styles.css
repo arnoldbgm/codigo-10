@@ -15,10 +15,9 @@ h1 {
 
 .grid-container {
     background-color: white;
-    height: 100vh;
+    height: 100%;
     max-width: 600px;
     padding: 20px;
-
     display: grid;
     grid-template-areas: 
     "header"
@@ -62,9 +61,13 @@ h1 {
     padding: 10px;
     display: grid;
     grid-template-areas:
-    "avatar content";
+    "avatar content content-img";
     grid-template-columns: 15% auto;
     gap: 10px;
+}
+
+.content-image img{
+    width: 50px;
 }
 
 .main .card .avatar {
@@ -95,6 +98,12 @@ h1 {
     color: hsl(1, 90%, 64%);
 }
 
+.commnet{
+    margin-top: 5px;
+    padding: 10px;
+    border: 1px solid #EAEEF0;
+    border-radius: 5px;
+}
 
 @media (min-width: 600px) {
     h1 {
