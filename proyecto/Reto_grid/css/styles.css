@@ -1,17 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@100;200;500;600&display=swap');
 
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 
     --purple-card: hsl(263, 55%, 52%);
     --gray-card: hsl(217, 19%, 35%);
-    --black-card:  hsl(219, 29%, 14%);
-    --white-card:  hsl(0, 0%, 100%)
+    --black-card: hsl(219, 29%, 14%);
+    --white-card: hsl(0, 0%, 100%)
 }
 
-body{
+body {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -20,65 +20,108 @@ body{
     font-family: 'Barlow Semi Condensed', sans-serif;
 }
 
-@media (min-width: 375px){
-    main{
+@media (min-width: 375px) {
+    main {
         display: flex;
         flex-direction: column;
         gap: 20px;
         padding: 20px;
     }
-    .card-purple{
+
+    .card-purple {
         background-color: var(--purple-card);
         border-radius: 20px;
         padding: 20px 40px 20px 40px;
         color: #fff;
     }
-    .img-header{
+
+    .img-header {
         display: flex;
         align-items: center;
         gap: 15px;
     }
-    .card-header h2{
+
+    .card-header h2 {
         font-size: 18px;
         font-weight: 400;
     }
-    .card-header span{
+
+    .card-header span {
         font-size: 14px;
         font-weight: 200;
     }
-    img{
+
+    img {
         width: 40px;
         border-radius: 50%;
         border: 2px solid #fff;
     }
-    .title-phrase{
+
+    .title-phrase {
         margin-bottom: 20px;
     }
-    .title-phrase h3{
+
+    .title-phrase h3 {
         margin-top: 10px;
         font-size: 25px;
     }
 
-    .title-phrase p{
+    .title-phrase p {
         margin-top: 10px;
         font-weight: 200;
     }
-    .card-gray{
+
+    .card-gray {
         background-color: var(--gray-card);
         border-radius: 20px;
         padding: 20px 40px 20px 40px;
         color: #fff;
     }
-    .card-white, .card-smoke{
+
+    .card-white,
+    .card-smoke {
         background-color: var(--white-card);
         border-radius: 20px;
         padding: 20px 40px 20px 40px;
         color: #000;
     }
-    .card-black{
+
+    .card-black {
         background-color: var(--black-card);
         border-radius: 20px;
         padding: 20px 40px 20px 40px;
         color: #fff;
+    }
+}
+
+@media (min-width:1440px) {
+    main {
+        display: grid;
+        height: 100vh;
+        grid-template-areas:
+            'card-purple card-purple card-gray card-smoke'
+            'card-white card-black card-black card-smoke';
+        grid-template-columns: 325px 325px 325px 325px;
+        grid-template-rows: 300px 300px 300px 300px;
+    }
+
+    .card-purple {
+        grid-area: card-purple;
+    }
+
+    .card-gray {
+        grid-area: card-gray;
+    }
+
+    .card-white {
+        grid-area: card-white;
+    }
+
+    .card-smoke {
+        grid-area: card-smoke;
+    }
+
+    .card-black {
+        grid-area: card-black;
     }
 }
