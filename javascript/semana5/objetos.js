@@ -136,3 +136,11 @@ function crearPersonasPrompt() {
 
     console.log(personas)
 }
+
+function notification() {
+    window.alert("Soy una notificacion");
+    console.log(window.location.host);
+    console.log(window.location.pathname);
+    console.log(window.innerHeight);
+    console.log(window.innerWidth)
+}
