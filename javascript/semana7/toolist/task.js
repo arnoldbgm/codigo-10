@@ -21,22 +21,31 @@ CRUD :> Cread  Read Update Delete;
 // ?Para poder usar import de este archivo tenemos que decir que nuestra clase sea exportable
 // !    Que pueda ser usada desde otro archivo "EXPORT"
 
-export class Task {
-    constructor(name, date, status) {
-    // La variable que contiene los datos introducidos es _name,_date,_status
+class Task {
+    constructor(id, name, date, status) {
+        // La variable que contiene los datos introducidos es _name,_date,_status
+        this._id = id;
         this._name = name;
         this._date = date;
         this._status = status
     }
+
+    // Llmar una funcion sin instanciar(ejecutarla)
+    // Static nos permite instanciar una clase
+    static destroyRender(id){
+        const element = document.querySelector(`#task-${id}`)
+        element.remove();
+    }
+
     // Es una clase que no hace falta usar la palabra function
-    render(){
-        return` <div class="item__task">
+    render() {
+        return ` <div  id="task-${this._id}"  class="item__task">
         <input type="checkbox" >
         <h6>${this._name}</h6>
         <button>
             <img src="./images/edit.png" alt="Edit" width="15">
         </button>
-        <button>
+        <button onclick="destroy(${this._id});">
             <img src="./images/delete.png" alt="" width="15">
         </button>
     </div>`

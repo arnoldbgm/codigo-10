@@ -1,13 +1,15 @@
-//!     Importa nuesto task
+//!     Importa nuesto task eso es cuando usmamo module
 
-import { Task } from "./task.js";
+// import { Task } from "./task.js";
+
+
 
 const inputTask = document.querySelector(".input__task");
 const bntCreate = document.querySelector(".btn__create");
 const listTask = document.querySelector(".container__list__task");
 
 //* Vamos a crear un arreglo vacio
-const arrayTasks = [];
+let arrayTasks = [];
 
 bntCreate.onclick = function () {
     const tasText = inputTask.value;
@@ -21,7 +23,7 @@ bntCreate.onclick = function () {
         return;
     }
 
-    const task = new Task(tasText, new Date(), 1)
+    const task = new Task(arrayTasks.length + 1, tasText, new Date(), 1)
 
     arrayTasks.push(task);
 
@@ -31,3 +33,17 @@ bntCreate.onclick = function () {
 
     inputTask.value = "";
 };
+
+
+function destroy(id) {
+    // En la condicio podemos decir que nos traiga todos los elemenots menos 
+    // el que tenga el id que estamos recibiendo 
+
+    const filterTask = arrayTasks.filter((task)=> task._id !== Number(id))
+
+    // console.log(filterTask);
+
+    arrayTasks = filterTask
+
+    Task.destroyRender(id);
+}
