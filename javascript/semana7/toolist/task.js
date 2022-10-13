@@ -28,4 +28,17 @@ export class Task {
         this._date = date;
         this._status = status
     }
+    // Es una clase que no hace falta usar la palabra function
+    render(){
+        return` <div class="item__task">
+        <input type="checkbox" >
+        <h6>${this._name}</h6>
+        <button>
+            <img src="./images/edit.png" alt="Edit" width="15">
+        </button>
+        <button>
+            <img src="./images/delete.png" alt="" width="15">
+        </button>
+    </div>`
+    }
 }

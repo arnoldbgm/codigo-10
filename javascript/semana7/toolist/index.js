@@ -4,6 +4,10 @@ import { Task } from "./task.js";
 
 const inputTask = document.querySelector(".input__task");
 const bntCreate = document.querySelector(".btn__create");
+const listTask = document.querySelector(".container__list__task");
+
+//* Vamos a crear un arreglo vacio
+const arrayTasks = [];
 
 bntCreate.onclick = function () {
     const tasText = inputTask.value;
@@ -19,5 +23,11 @@ bntCreate.onclick = function () {
 
     const task = new Task(tasText, new Date(), 1)
 
-    console.log(task);
+    arrayTasks.push(task);
+
+    console.log(arrayTasks);
+
+    listTask.innerHTML += task.render();
+
+    inputTask.value = "";
 };
