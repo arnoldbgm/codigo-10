@@ -1,28 +1,62 @@
-// ES una clase xq va a extender de HTMLElement
-// HTMLElement es un clase nativa de JS
-class Card extends HTMLElement{
-    
-    // Como esta clase tiene un extendes requerimos de un super
-    constructor(){
-        // Usando super() dentro del constructor vamos a poder crear
-        // atributos propios
-        super();
+// Es una clase porque va a extender de HTMLElement
+// HTMLElement: Es una clase nativa de JS
+class MyCard extends HTMLElement {
+    // como esta clase tiene un extends requerimos de un super
+    constructor() {
+      // usando supper() dentro del contructur vamos a podrear atributos propios
+      super();
+      this.title = "";
+      this.img = "";
+      this.message = "";
     }
-
+  
+    // Para poder recibir parametro desde HTML necesitamos 2 funciones
+    static get observedAttributes() {
+      // En esta funcion vamos a definir que paremtros acepta nuestro componente
+      // para poder saber quienes son vamos
+      // a defirnolos dentro un array
+      return ["title", "message", "img"];
+    }
+  
+    // como podemos guardar el valor que estamos
+    // recibiendo
+    attributeChangedCallback(name, _, newvalue) {
+      // * name => nombre del atributo
+      // * oldvalue => es el valor actual
+      // * es el nuevo valor que estamos recibiendo
+      switch (name) {
+        case "title":
+          this.title = newvalue;
+          break;
+        case "img":
+          this.img = newvalue;
+          break;
+        case "message":
+          this.message = newvalue;
+          break;
+        default:
+          break;
+      }
+    }
+  
     // Para poder asignar html dentro de mi tag
-    // Dbemos de llamar al ufnccion connected callback
-
+    // debemos llamar a la funcion connectedCallback()
+  
     // esta funcion se ejecuta de forma automatica
-    // cuando nuestro componenete se crea en htmml
-
-    connectedCallback(){
-        this.innerHTML = `
-        <div class="card">
-        <img width="400px" src="https://pics.me.me/almost-done-almost-html-css-oh-yes-oh-shit-bootstrap-42009628.png"/>
-        <h4>Hola desde mi componente</h4>
-        </div>`
+    // cuando nuestro component se crea en html
+    connectedCallback() {
+      this.classList.add("col-12", "col-sm-4", "col-md-3");
+      this.innerHTML = `
+        <div class="card mt-5">
+          <img width="100%" class="card-img-top" src="${this.img}" /> 
+          <div class="card-body">
+            <h5 class="card-title">${this.title}</h5>
+            <p class="card-text">${this.message}</p>
+            <button class="btn btn-link">Leer mas</button>
+          </div>
+        </div>
+      `;
     }
-}
-
-// my-card es el nombre de la etiqueta con el que vamos a crear
-customElements.define("my-card", Card)
+  }
+  
+  customElements.define("my-card", MyCard);
