@@ -37,9 +37,13 @@ class Task {
         element.remove();
     }
 
-    static updateRender(id) {
+    static updateRender(id, name) {
         const element = document.querySelector(`#task-name-${id}`)
-        console.log(element);
+        //Para cambiar el texto se usa
+        // innerText =
+        // textContent =
+
+        element.textContent = name;
     }
 
     // Es una clase que no hace falta usar la palabra function
@@ -56,3 +60,31 @@ class Task {
     </div>`
     }
 }
+
+
+
+function vowelsAndConsonants(s) {
+    // Mostrar primero las vocales en orden y luego mostrar las consonantes
+    // Asi debe salir "a a i o o j v s c r p t l p s"
+    let word = "javascriptloops"
+    // Introducimos en un array ordenado alfabeticamente
+    let array = word.split("").sort();
+    let vocals = ["a", "e", "i", "o", "u"]
+    // Creamos otro array sin vocales 
+    let word2 = word.replace(/[aeiou]/gi, '');
+    let array2 = word2.split("");
+    // Mostramos solo las vocales
+    array.forEach((e, index) => {
+        vocals.forEach(vocal => {
+            if (e === vocal) {
+                console.log(e)
+            }
+        })
+    })
+    // Mostramos los elementos del array sin vocales
+    array2.forEach(e => {
+        console.log(e)
+    })
+
+}
+
