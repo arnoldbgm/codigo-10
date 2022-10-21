@@ -1,0 +1,55 @@
+body {
+  font-family: sans-serif;
+  color: #f01;
+  background-color: rgb(247, 247, 230);
+}
+
+main {
+  width: 560px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+}
+
+.container__form {
+  text-align: center;
+}
+.container__form input {
+  padding: 10px;
+  width: 320px;
+  border-radius: 8px;
+}
+.container__form input:hover {
+  border: solid 1px rgb(80, 255, 153);
+}
+.container__form button {
+  background-color: rgb(80, 255, 153);
+  padding: 10px;
+  border: solid rgb(80, 255, 153);
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.container__tasks .task__end {
+  color: #000;
+  background-color: rgb(88, 221, 88);
+  padding: 12px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+.container__tasks .task__in__progress {
+  color: #fff;
+  background-color: rgb(21, 121, 214);
+  padding: 12px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+.container__tasks .task__delete {
+  color: #fff;
+  background-color: rgb(235, 110, 118);
+  padding: 12px;
+  border-radius: 8px;
+  margin-top: 20px;
+}/*# sourceMappingURL=index.css.map */

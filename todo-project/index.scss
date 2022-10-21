@@ -1,0 +1,70 @@
+// Vamos a importar al archivo que contiene a nuestras variables
+@import "./variables.scss";
+
+
+body {
+    font-family: $font-title;
+    color: $red-color;
+    background-color: $background-gray-color;
+}
+
+main{
+    width: 560px;
+    margin: 0 auto;
+}
+
+h1{
+    text-align: center;
+}
+// Nesting es colocar estilos que estan dentro del padre
+.container__form{
+    
+    text-align: center;
+
+    input{
+        padding: 10px;
+        width: 320px;
+        border-radius: 8px;
+        // Si queremos aplicar un efecto como el hover
+        // solo usamo &:hover 
+        // ! NOTA ESTE DEBE ESTAR DENTRO DEL ELEMENTO
+        &:hover{
+            border: solid 1px $primary-color
+        }
+    }
+
+
+    button{
+        background-color: $primary-color;
+        padding: 10px;
+        border: solid $primary-color;
+        border-radius: 8px;
+        font-size: 16px;
+    }
+}
+
+
+// Mixins => Es una funcion de SAS ña cual nos permite juntar codigo
+// Crear bloques de estilos, pero estos pueden ser parametrizables
+
+@mixin taskcard($bgcolor: rgb(235, 110, 118), $textcolor: #fff) {
+    color: $textcolor;
+    background-color: $bgcolor;
+    padding: 12px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.container__tasks{
+
+    .task__end{
+        @include taskcard($bgcolor: rgb(88, 221, 88), $textcolor: #000)
+    }
+    .task__in__progress{
+        @include taskcard($bgcolor: rgb(21, 121, 214))
+    }
+
+    .task__delete{
+        @include taskcard()
+    }
+}
